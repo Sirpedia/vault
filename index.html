@@ -1,0 +1,35 @@
+<html>
+
+<title>vault</title>
+
+<h1 id="text1" style="position: absolute; top: 30vh; left: 50vw;">
+<input id="code" style="position: absolute; top: 40vh; left: 35vw;">
+<button onclick="Enter()" style="position: absolute; top: 40vh; left: 55vw;">Guess</button>
+
+  <script>
+
+function Enter() {
+text1 = document.getElementById("text1")
+pass = document.getElementById("code")
+if (pass.value == "9543") {
+text1.innerHTML = "you guessed it!"
+  
+}
+if (parseInt(pass.value) > 9543) {
+text1.innerHTML = "go lower"
+  
+}
+}
+
+
+
+
+    
+  </script>
+
+
+
+
+
+  
+</html>
