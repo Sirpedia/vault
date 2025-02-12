@@ -1,35 +1,26 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <title>vault</title>
+</head>
+<body>
+    <h1 id="text1" style="position: absolute; top: 30vh; left: 10vw;">THE VAULT</h1>
+    <input id="code" style="position: absolute; top: 40vh; left: 10vw;">
+    <button onclick="Enter()" style="position: absolute; top: 40vh; left: 15vw;">Guess</button>
 
-<title>vault</title>
+    <script>
+        function Enter() {
+            const text1 = document.getElementById("text1");
+            const pass = document.getElementById("code");
 
-<h1 id="text1" style="position: absolute; top: 30vh; left: 10vw;">THE VAULT</h1>
-<input id="code" style="position: absolute; top: 40vh; left: 10vw;">
-<button onclick="Enter()" style="position: absolute; top: 40vh; left: 15vw;">Guess</button>
-
-  <script>
-
-function Enter() {
-text1 = document.getElementById("text1")
-pass = document.getElementById("code")
-if (pass.value == "9543") {
-text1.innerHTML = "you guessed it!"
-  
-}
-if (parseInt(pass.value) > 9543) {
-text1.innerHTML = "go lower"
-  
-}
-}
-
-
-
-
-    
-  </script>
-
-
-
-
-
-  
+            if (pass.value == "9543") {
+                text1.innerHTML = "you guessed it!";
+            } else if (parseInt(pass.value) > 9543) {
+                text1.innerHTML = "go lower";
+            } else {
+                text1.innerHTML = "go higher";
+            }
+        }
+    </script>
+</body>
 </html>
